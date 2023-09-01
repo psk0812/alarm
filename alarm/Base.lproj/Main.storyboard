@@ -1,24 +1,287 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HhK-nC-e97">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--useful_controller-->
+        <scene sceneID="DYx-BO-tvh">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController title="useful_controller" id="Tbg-Kt-Bwu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iPD-Tw-FQx">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="6Rh-3j-zEX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="txz-ep-Sag"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9j9-da-Nf9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-60" y="658"/>
+        </scene>
+        <!--youtube_alram-->
+        <scene sceneID="GAV-D9-9QP">
+            <objects>
+                <viewController title="youtube_alram" id="HhK-nC-e97" customClass="Web_Controller" customModule="alarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="UnR-rH-zfo">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="916"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AmE-XP-TEx">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="906"/>
+                                <subviews>
+                                    <wkWebView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ab6-Kz-doB">
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="586"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="586" id="rCF-jX-2dA"/>
+                                        </constraints>
+                                        <wkWebViewConfiguration key="configuration" allowsInlineMediaPlayback="YES">
+                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                            <wkPreferences key="preferences"/>
+                                        </wkWebViewConfiguration>
+                                    </wkWebView>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q1S-4h-F92">
+                                        <rect key="frame" x="0.0" y="586" width="428" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="PxX-DJ-AL2"/>
+                                            <constraint firstAttribute="height" constant="50" id="y9Y-Ys-fyF"/>
+                                        </constraints>
+                                        <items>
+                                            <barButtonItem title="&lt; Back" id="AZD-lq-jga">
+                                                <connections>
+                                                    <action selector="back_clicked:" destination="HhK-nC-e97" id="Fsq-3n-dBd"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="N9n-6G-uHW"/>
+                                            <barButtonItem title="동영상 선택" id="s32-rw-9Ak" userLabel="동영상 선택">
+                                                <connections>
+                                                    <action selector="url_btn_clicked:" destination="HhK-nC-e97" id="b46-Qz-cGc"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="JGy-n9-zda"/>
+                                            <barButtonItem title="Forward&gt;" id="C0A-G2-tXF">
+                                                <connections>
+                                                    <action selector="forward_clicked:" destination="HhK-nC-e97" id="h2U-qc-6bl"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                    </toolbar>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9y9-oQ-1vv">
+                                        <rect key="frame" x="0.0" y="636" width="428" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BV7-dM-xdJ" userLabel="Select">
+                                                <rect key="frame" x="344.33333333333331" y="33" width="53.666666666666686" height="24"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="선택"/>
+                                                <connections>
+                                                    <action selector="youtube_btn_clicked:" destination="HhK-nC-e97" eventType="touchUpInside" id="N8C-Gl-NVW"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="BV7-dM-xdJ" secondAttribute="trailing" constant="30" id="4K7-p2-0QK"/>
+                                            <constraint firstItem="BV7-dM-xdJ" firstAttribute="centerY" secondItem="9y9-oQ-1vv" secondAttribute="centerY" id="Ojf-OV-qhC"/>
+                                            <constraint firstItem="BV7-dM-xdJ" firstAttribute="top" secondItem="9y9-oQ-1vv" secondAttribute="top" constant="33" id="qHr-fX-IQ0"/>
+                                            <constraint firstAttribute="height" constant="90" id="x0u-ZG-nxh"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GTg-Dq-fbi">
+                                        <rect key="frame" x="0.0" y="726" width="428" height="100"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="TiQ-ZX-hk1">
+                                                <rect key="frame" x="0.0" y="0.0" width="428" height="100"/>
+                                                <subviews>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ioD-8M-evV" userLabel="ampm_pick" customClass="ampm_PickerView" customModule="alarm" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="142.66666666666666" height="100"/>
+                                                    </pickerView>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wl3-47-6aQ" userLabel="hour_pick" customClass="hour_PickerView" customModule="alarm" customModuleProvider="target">
+                                                        <rect key="frame" x="142.66666666666669" y="0.0" width="142.66666666666669" height="100"/>
+                                                    </pickerView>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fDz-lC-Xfv" userLabel="minutes_pick" customClass="minutes_PickerView" customModule="alarm" customModuleProvider="target">
+                                                        <rect key="frame" x="285.33333333333331" y="0.0" width="142.66666666666669" height="100"/>
+                                                    </pickerView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="6fk-L4-5jy"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="FTN-MK-TM5"/>
+                                            <constraint firstAttribute="bottom" secondItem="TiQ-ZX-hk1" secondAttribute="bottom" id="SYy-vU-CBd"/>
+                                            <constraint firstAttribute="trailing" secondItem="TiQ-ZX-hk1" secondAttribute="trailing" id="vZn-ZM-QV4"/>
+                                            <constraint firstItem="TiQ-ZX-hk1" firstAttribute="leading" secondItem="GTg-Dq-fbi" secondAttribute="leading" id="xm7-pc-ReM"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gaR-c4-wpr">
+                                        <rect key="frame" x="0.0" y="826" width="428" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6D-JC-cn0">
+                                                <rect key="frame" x="277" y="23.000000000000004" width="121" height="34.333333333333343"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="알람 설정 완료"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="N6D-JC-cn0" firstAttribute="centerY" secondItem="gaR-c4-wpr" secondAttribute="centerY" id="9ZI-cW-TUs"/>
+                                            <constraint firstAttribute="trailing" secondItem="N6D-JC-cn0" secondAttribute="trailing" constant="30" id="ZB6-At-dkV"/>
+                                            <constraint firstAttribute="height" constant="80" id="sea-fk-eQf"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iOY-hx-DKQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AmE-XP-TEx" firstAttribute="leading" secondItem="UnR-rH-zfo" secondAttribute="leading" id="Aw8-oL-mwe"/>
+                            <constraint firstItem="iOY-hx-DKQ" firstAttribute="bottom" secondItem="AmE-XP-TEx" secondAttribute="bottom" id="B6R-7p-onh"/>
+                            <constraint firstAttribute="trailing" secondItem="AmE-XP-TEx" secondAttribute="trailing" id="FCt-LI-Fcm"/>
+                            <constraint firstItem="AmE-XP-TEx" firstAttribute="top" secondItem="iOY-hx-DKQ" secondAttribute="top" id="Pxl-CO-654"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ampm_pick" destination="ioD-8M-evV" id="5A7-M3-Uus"/>
+                        <outlet property="back_btn" destination="AZD-lq-jga" id="Au0-SF-Jhr"/>
+                        <outlet property="forward_btn" destination="C0A-G2-tXF" id="FT8-1q-8xs"/>
+                        <outlet property="hour_pick" destination="Wl3-47-6aQ" id="GEc-XD-tyA"/>
+                        <outlet property="minutes_pick" destination="fDz-lC-Xfv" id="sO0-7a-ZZC"/>
+                        <outlet property="url_select_btn" destination="s32-rw-9Ak" id="er3-mh-Hyb"/>
+                        <outlet property="youtube_btn" destination="BV7-dM-xdJ" id="TGb-et-eVY"/>
+                        <outlet property="youtube_webview" destination="Ab6-Kz-doB" id="NDR-FF-AfI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dqb-8Z-bRR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1290.4000000000001" y="-39.130434782608695"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="WYm-cc-mbw">
+            <objects>
+                <viewController id="Dd6-Ub-gkf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BQ5-xK-7xB">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="dMt-g9-80k"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="bgK-rR-Con"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2rP-bG-v2t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="630" y="312"/>
+        </scene>
+        <!--youtube_controller-->
+        <scene sceneID="0on-p3-OOH">
+            <objects>
+                <viewController autoresizesArchivedViewToFullSize="NO" title="youtube_controller" id="Bbj-la-IRF" customClass="YoutubeController" customModule="alarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j7u-PY-WqU">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7fR-6U-W6l">
+                                <rect key="frame" x="0.0" y="47" width="428" height="796"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYw-eG-IxP">
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="110"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="110" id="Ghu-1l-thc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <nil key="textColor"/>
+                                        </variation>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Md4-0v-sgC">
+                                        <rect key="frame" x="0.0" y="110" width="428" height="626"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ehe-ZX-JYi">
+                                        <rect key="frame" x="0.0" y="736" width="428" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q77-hL-PKR">
+                                                <rect key="frame" x="336" y="13" width="75" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                <connections>
+                                                    <segue destination="HhK-nC-e97" kind="presentation" id="Tiu-rj-sXy"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="64y-tc-r8r"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="9to-Z6-0jj"/>
+                                            <constraint firstItem="q77-hL-PKR" firstAttribute="centerY" secondItem="Ehe-ZX-JYi" secondAttribute="centerY" id="UtH-8x-J1k"/>
+                                            <constraint firstAttribute="trailing" secondItem="q77-hL-PKR" secondAttribute="trailing" constant="17" id="wMr-7f-6Kq"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VTQ-LK-7o3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VTQ-LK-7o3" firstAttribute="trailing" secondItem="7fR-6U-W6l" secondAttribute="trailing" id="5sy-u1-wAn"/>
+                            <constraint firstItem="7fR-6U-W6l" firstAttribute="top" secondItem="VTQ-LK-7o3" secondAttribute="top" id="9F9-8W-oOf"/>
+                            <constraint firstItem="7fR-6U-W6l" firstAttribute="leading" secondItem="VTQ-LK-7o3" secondAttribute="leading" id="TzR-8I-StN"/>
+                            <constraint firstItem="VTQ-LK-7o3" firstAttribute="bottom" secondItem="7fR-6U-W6l" secondAttribute="bottom" id="doo-tC-GYb"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Youtube" image="youtube" id="xtW-T3-rdi">
+                        <color key="badgeColor" systemColor="secondarySystemBackgroundColor"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="Good_day" destination="lYw-eG-IxP" id="upG-6P-4P7"/>
+                        <outlet property="alaram_tableview" destination="Md4-0v-sgC" id="sM2-gk-pfh"/>
+                        <outlet property="alram_plus_btn" destination="q77-hL-PKR" id="bM4-TU-5WA"/>
+                        <outlet property="background_View" destination="j7u-PY-WqU" id="a8X-KK-olH"/>
+                        <outlet property="button_view" destination="Ehe-ZX-JYi" id="Rc7-QW-qC2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fda-Uq-ihd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="597.70992366412213" y="-398.59154929577466"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="IGf-Li-KVx">
+            <objects>
+                <tabBarController id="AuS-Ca-BML" customClass="TabBar_Controller" customModule="alarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jtE-15-abI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Bbj-la-IRF" kind="relationship" relationship="viewControllers" id="TJn-ZZ-8U6"/>
+                        <segue destination="Dd6-Ub-gkf" kind="relationship" relationship="viewControllers" id="bdf-xn-XD4"/>
+                        <segue destination="Tbg-Kt-Bwu" kind="relationship" relationship="viewControllers" id="MM4-LQ-9cz"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aAh-ex-k6s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-306" y="-94"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="youtube" width="16.666666030883789" height="16.666666030883789"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

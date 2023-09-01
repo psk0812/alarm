@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import WebKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
