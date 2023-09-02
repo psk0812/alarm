@@ -161,15 +161,35 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oU1-8v-OpU">
                                                         <rect key="frame" x="334.33333333333331" y="18.000000000000004" width="53.666666666666686" height="34.333333333333343"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="53.670000000000002" id="DPp-l0-tYr"/>
+                                                            <constraint firstAttribute="height" constant="34.329999999999998" id="sq1-cr-9cz"/>
+                                                        </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="저장"/>
                                                     </button>
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jpA-VT-JSd">
+                                                        <rect key="frame" x="108.00000000000001" y="20" width="208.33333333333337" height="31"/>
+                                                    </slider>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speaker.wave.2.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dQn-NF-CrE">
+                                                        <rect key="frame" x="50" y="17" width="40" height="36.333333333333329"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="PHp-1K-Buq"/>
+                                                            <constraint firstAttribute="width" constant="40" id="Rgu-Mv-XfD"/>
+                                                        </constraints>
+                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="oU1-8v-OpU" secondAttribute="trailing" constant="40" id="HdV-dj-Dmd"/>
+                                                    <constraint firstItem="oU1-8v-OpU" firstAttribute="centerY" secondItem="5o5-wC-wth" secondAttribute="centerY" id="1k9-pg-SdA"/>
+                                                    <constraint firstItem="oU1-8v-OpU" firstAttribute="leading" secondItem="jpA-VT-JSd" secondAttribute="trailing" constant="20" id="Aaw-KC-bml"/>
+                                                    <constraint firstAttribute="trailing" secondItem="oU1-8v-OpU" secondAttribute="trailing" constant="40" id="Efa-eG-NzU"/>
+                                                    <constraint firstItem="jpA-VT-JSd" firstAttribute="top" secondItem="5o5-wC-wth" secondAttribute="top" constant="20" id="Fc0-3l-Eu4"/>
+                                                    <constraint firstItem="dQn-NF-CrE" firstAttribute="leading" secondItem="5o5-wC-wth" secondAttribute="leading" constant="50" id="OYG-kJ-oA1"/>
+                                                    <constraint firstAttribute="bottom" secondItem="jpA-VT-JSd" secondAttribute="bottom" constant="20" id="Okc-hO-hCk"/>
                                                     <constraint firstAttribute="height" constant="70" id="Qoz-vT-THW"/>
-                                                    <constraint firstItem="oU1-8v-OpU" firstAttribute="centerY" secondItem="5o5-wC-wth" secondAttribute="centerY" id="Tsz-j1-Mca"/>
+                                                    <constraint firstItem="dQn-NF-CrE" firstAttribute="centerY" secondItem="5o5-wC-wth" secondAttribute="centerY" id="qdY-Nq-fgc"/>
+                                                    <constraint firstItem="jpA-VT-JSd" firstAttribute="leading" secondItem="dQn-NF-CrE" secondAttribute="trailing" constant="20" id="w2T-Lb-k6Q"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -336,6 +356,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="speaker.wave.2.fill" catalog="system" width="128" height="88"/>
         <image name="youtube" width="16.666666030883789" height="16.666666030883789"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
