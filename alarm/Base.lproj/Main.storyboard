@@ -105,16 +105,71 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gCy-Q0-M7W">
                                                 <rect key="frame" x="0.0" y="746" width="428" height="100"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wEs-8T-oAJ">
+                                                        <rect key="frame" x="20" y="33" width="388" height="34"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jms-yn-oDg">
+                                                                <rect key="frame" x="0.0" y="0.0" width="55.333333333333336" height="34"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="월"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEf-1D-reN">
+                                                                <rect key="frame" x="55.333333333333329" y="0.0" width="55.666666666666671" height="34"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="화"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UbF-FY-FLa">
+                                                                <rect key="frame" x="110.99999999999999" y="0.0" width="55.333333333333329" height="34"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="수"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rd7-El-mAD">
+                                                                <rect key="frame" x="166.33333333333334" y="0.0" width="55.333333333333343" height="34"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="목"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIe-89-NxF">
+                                                                <rect key="frame" x="221.66666666666666" y="0.0" width="55.333333333333343" height="34"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="금"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHe-ZV-ucF">
+                                                                <rect key="frame" x="277" y="0.0" width="55.666666666666686" height="34"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="토"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQX-Di-IFN">
+                                                                <rect key="frame" x="332.66666666666669" y="0.0" width="55.333333333333314" height="34"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="일"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
+                                                    <constraint firstItem="wEs-8T-oAJ" firstAttribute="top" secondItem="gCy-Q0-M7W" secondAttribute="top" constant="33" id="5C1-UD-pK8"/>
                                                     <constraint firstAttribute="height" constant="100" id="Hif-RH-YaR"/>
+                                                    <constraint firstItem="wEs-8T-oAJ" firstAttribute="leading" secondItem="gCy-Q0-M7W" secondAttribute="leading" constant="20" id="Ije-6e-j75"/>
+                                                    <constraint firstAttribute="trailing" secondItem="wEs-8T-oAJ" secondAttribute="trailing" constant="20" id="Mkz-A1-MEF"/>
+                                                    <constraint firstItem="wEs-8T-oAJ" firstAttribute="centerY" secondItem="gCy-Q0-M7W" secondAttribute="centerY" id="h9i-W0-vAg"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5o5-wC-wth">
                                                 <rect key="frame" x="0.0" y="846" width="428" height="70"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oU1-8v-OpU">
+                                                        <rect key="frame" x="334.33333333333331" y="18.000000000000004" width="53.666666666666686" height="34.333333333333343"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="저장"/>
+                                                    </button>
+                                                </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="oU1-8v-OpU" secondAttribute="trailing" constant="40" id="HdV-dj-Dmd"/>
                                                     <constraint firstAttribute="height" constant="70" id="Qoz-vT-THW"/>
+                                                    <constraint firstItem="oU1-8v-OpU" firstAttribute="centerY" secondItem="5o5-wC-wth" secondAttribute="centerY" id="Tsz-j1-Mca"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
