@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="-60" y="658"/>
         </scene>
-        <!--youtube_alram-->
+        <!--youtube_alarm-->
         <scene sceneID="GAV-D9-9QP">
             <objects>
-                <viewController title="youtube_alram" id="HhK-nC-e97" customClass="Web_Controller" customModule="alarm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="youtube_alram_Controller" title="youtube_alarm" id="HhK-nC-e97" customClass="youtube_alram_Controller" customModule="alarm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UnR-rH-zfo">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="916"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,6 +49,9 @@
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="tinted" title="youtube 선택"/>
+                                                        <connections>
+                                                            <segue destination="Fzm-WX-1ZI" kind="presentation" modalPresentationStyle="fullScreen" id="dX0-Ss-vQi"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lx-IL-JD1">
                                                         <rect key="frame" x="30" y="155" width="368" height="211"/>
@@ -237,6 +240,7 @@
                     <connections>
                         <outlet property="ampm_pick" destination="AMp-6h-lNd" id="qf6-I9-td6"/>
                         <outlet property="back_btn" destination="hOV-k1-BYh" id="giZ-YB-PRS"/>
+                        <outlet property="caution_label" destination="6a5-gz-zfw" id="kGN-rf-4ij"/>
                         <outlet property="forward_btn" destination="hw8-zi-bav" id="fnI-VK-Vhm"/>
                         <outlet property="friday" destination="XIe-89-NxF" id="rzE-ST-FIC"/>
                         <outlet property="hour_pick" destination="JCT-Ls-5EF" id="bZ8-t8-KHP"/>
@@ -248,25 +252,26 @@
                         <outlet property="tuesday" destination="VEf-1D-reN" id="RB5-uS-5wq"/>
                         <outlet property="url_select_btn" destination="eeG-ge-5EA" id="CcE-hK-IJd"/>
                         <outlet property="wednesday" destination="UbF-FY-FLa" id="U5p-eM-Voc"/>
+                        <outlet property="youtube_title" destination="3lx-IL-JD1" id="qea-la-hgE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dqb-8Z-bRR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1289.7196261682243" y="-39.524838012958966"/>
         </scene>
-        <!--View Controller-->
+        <!--Site View Controller-->
         <scene sceneID="C1q-Ho-5Jm">
             <objects>
-                <viewController id="Fzm-WX-1ZI" sceneMemberID="viewController">
+                <viewController id="Fzm-WX-1ZI" customClass="Site_ViewController" customModule="alarm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S3n-Hh-fpj">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CWf-rB-6rJ">
-                                <rect key="frame" x="0.0" y="47" width="428" height="845"/>
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                                 <subviews>
                                     <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6P5-9p-Y9w">
-                                        <rect key="frame" x="0.0" y="0.0" width="428" height="795"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="876"/>
                                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <wkWebViewConfiguration key="configuration">
                                             <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -274,20 +279,20 @@
                                         </wkWebViewConfiguration>
                                     </wkWebView>
                                     <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2CP-FX-aDy">
-                                        <rect key="frame" x="0.0" y="795" width="428" height="50"/>
+                                        <rect key="frame" x="0.0" y="876" width="428" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="pSH-4H-RuL"/>
                                         </constraints>
                                         <items>
                                             <barButtonItem image="arrowshape.backward.fill" catalog="system" id="hOV-k1-BYh" userLabel="back_btn">
                                                 <connections>
-                                                    <action selector="back_btn_clicked:" destination="HhK-nC-e97" id="xJ8-wj-0eB"/>
+                                                    <action selector="back_clicked:" destination="Fzm-WX-1ZI" id="K9s-IL-1jy"/>
                                                 </connections>
                                             </barButtonItem>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="RP0-RU-7x9"/>
                                             <barButtonItem title="동영상 선택" id="eeG-ge-5EA" userLabel="url_select_btn">
                                                 <connections>
-                                                    <action selector="url_btn_clicked:" destination="HhK-nC-e97" id="nOM-Ay-i37"/>
+                                                    <action selector="url_clicked:" destination="Fzm-WX-1ZI" id="Pnv-vt-AcS"/>
                                                 </connections>
                                             </barButtonItem>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="21R-kh-bP1">
@@ -297,7 +302,7 @@
                                             </barButtonItem>
                                             <barButtonItem image="arrowshape.right.fill" catalog="system" id="hw8-zi-bav" userLabel="forward_btn">
                                                 <connections>
-                                                    <action selector="forward_btn_clicked:" destination="HhK-nC-e97" id="UXQ-eW-tdd"/>
+                                                    <action selector="forward_clicked:" destination="Fzm-WX-1ZI" id="1kv-Ln-xHx"/>
                                                 </connections>
                                             </barButtonItem>
                                         </items>
@@ -314,6 +319,12 @@
                             <constraint firstItem="CWf-rB-6rJ" firstAttribute="leading" secondItem="dYe-uM-hl9" secondAttribute="leading" id="l4F-f7-Dse"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="back_btn" destination="hOV-k1-BYh" id="Tlf-If-eE6"/>
+                        <outlet property="forward_btn" destination="hw8-zi-bav" id="v18-M4-FQc"/>
+                        <outlet property="url_btn" destination="eeG-ge-5EA" id="Bi4-qd-hRG"/>
+                        <outlet property="youtube_webview" destination="6P5-9p-Y9w" id="P1Z-d7-4HU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Nc-hy-SOF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
