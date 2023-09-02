@@ -11,27 +11,23 @@ import WebKit
 
 
 class Web_Controller:UIViewController{
-
+    
     @IBOutlet var youtube_webview: WKWebView!
-   
-    @IBOutlet var youtube_btn: UIButton!
+    
     
     @IBOutlet var back_btn: UIBarButtonItem!
-
-  
     
     @IBOutlet var url_select_btn: UIBarButtonItem!
     
-
     @IBOutlet var forward_btn: UIBarButtonItem!
     
+    
 
-    @IBOutlet var ampm_pick: UIPickerView!
+    @IBOutlet var ampm_pick: ampm_PickerView!
     
-    @IBOutlet var hour_pick: UIPickerView!
+    @IBOutlet var hour_pick: hour_PickerView!
     
-    @IBOutlet var minutes_pick: UIPickerView!
-    
+    @IBOutlet var minutes_pick: minutes_PickerView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,7 +38,7 @@ class Web_Controller:UIViewController{
             
         }
         
-      
+        
     }
     
     //빈공간 터치시 키보드 내려감
@@ -50,45 +46,41 @@ class Web_Controller:UIViewController{
         self.view.endEditing(true)
     }
     
+    
     @IBAction func url_btn_clicked(_ sender: Any) {
         
         
         if let currentURL = youtube_webview.url {
-           
+            
             print("Current URL: \(currentURL)")
             
-       
+            
         }
         
-//        //현재 보고 있는 유튜브동영상의 타이틀을 가져온다.
-//        youtube_webview.evaluateJavaScript("document.title") { (result, error) in
-//            if error == nil {
-//                if let title = result as? String {
-//                    self.song_title.numberOfLines=0
-//                    self.song_title.text=title
-//                    print("Document title: \(title)")
-//                }
-//            }
-//        }
-    }
-
-   
-    
-    
-    @IBAction func back_clicked(_ sender: Any) {
-        if youtube_webview.canGoBack{
-            youtube_webview.goBack()
-        }
+        //        //현재 보고 있는 유튜브동영상의 타이틀을 가져온다.
+        //        youtube_webview.evaluateJavaScript("document.title") { (result, error) in
+        //            if error == nil {
+        //                if let title = result as? String {
+        //                    self.song_title.numberOfLines=0
+        //                    self.song_title.text=title
+        //                    print("Document title: \(title)")
+        //                }
+        //            }
+        //        }
     }
     
-    @IBAction func forward_clicked(_ sender: Any) {
+    
+    
+    @IBAction func forward_btn_clicked(_ sender: Any) {
         if youtube_webview.canGoForward{
             youtube_webview.goForward()
         }
     }
     
+    @IBAction func back_btn_clicked(_ sender: Any) {
+        if youtube_webview.canGoBack{
+            youtube_webview.goBack()
+        }
+    }
     
-  
 }
-
-
