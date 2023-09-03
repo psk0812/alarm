@@ -50,7 +50,7 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="tinted" title="youtube 선택"/>
                                                         <connections>
-                                                            <segue destination="Fzm-WX-1ZI" kind="presentation" modalPresentationStyle="fullScreen" id="dX0-Ss-vQi"/>
+                                                            <segue destination="Fzm-WX-1ZI" kind="presentation" modalPresentationStyle="automatic" id="dX0-Ss-vQi"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lx-IL-JD1">
@@ -116,38 +116,69 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jms-yn-oDg">
                                                                 <rect key="frame" x="0.0" y="0.0" width="55.333333333333336" height="34"/>
-                                                                <state key="normal" title="Button"/>
+                                                                <color key="tintColor" systemColor="systemGrayColor"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="월">
+                                                                    <color key="titleColor" systemColor="systemGrayColor"/>
+                                                                </state>
                                                                 <buttonConfiguration key="configuration" style="plain" title="월"/>
+                                                                <connections>
+                                                                    <action selector="monday_clicked:" destination="HhK-nC-e97" eventType="touchUpInside" id="vQc-sP-p7M"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEf-1D-reN">
                                                                 <rect key="frame" x="55.333333333333329" y="0.0" width="55.666666666666671" height="34"/>
+                                                                <color key="tintColor" systemColor="systemGrayColor"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="화"/>
+                                                                <connections>
+                                                                    <action selector="tuesday_clicked:" destination="HhK-nC-e97" eventType="touchUpInside" id="X38-BZ-iUI"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UbF-FY-FLa">
                                                                 <rect key="frame" x="110.99999999999999" y="0.0" width="55.333333333333329" height="34"/>
+                                                                <color key="tintColor" systemColor="systemGrayColor"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="수"/>
+                                                                <connections>
+                                                                    <action selector="wednesday_clicked:" destination="HhK-nC-e97" eventType="touchUpInside" id="8ao-dR-QLu"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rd7-El-mAD">
                                                                 <rect key="frame" x="166.33333333333334" y="0.0" width="55.333333333333343" height="34"/>
+                                                                <color key="tintColor" systemColor="systemGrayColor"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="목"/>
+                                                                <connections>
+                                                                    <action selector="thursday_clicked:" destination="HhK-nC-e97" eventType="touchUpInside" id="L2Z-Qn-ihe"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIe-89-NxF">
                                                                 <rect key="frame" x="221.66666666666666" y="0.0" width="55.333333333333343" height="34"/>
+                                                                <color key="tintColor" systemColor="systemGrayColor"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="금"/>
+                                                                <connections>
+                                                                    <action selector="friday_clicked:" destination="HhK-nC-e97" eventType="touchUpInside" id="m9j-2m-c9c"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHe-ZV-ucF">
                                                                 <rect key="frame" x="277" y="0.0" width="55.666666666666686" height="34"/>
+                                                                <color key="tintColor" systemColor="systemGrayColor"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="토"/>
+                                                                <connections>
+                                                                    <action selector="saturday_clicked:" destination="HhK-nC-e97" eventType="touchUpInside" id="RLw-a4-d23"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQX-Di-IFN">
                                                                 <rect key="frame" x="332.66666666666669" y="0.0" width="55.333333333333314" height="34"/>
+                                                                <color key="tintColor" systemColor="systemGrayColor"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="일"/>
+                                                                <connections>
+                                                                    <action selector="sunday_clicked:" destination="HhK-nC-e97" eventType="touchUpInside" id="6Jz-ev-Xq7"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -185,6 +216,7 @@
                                                     </imageView>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iphone.radiowaves.left.and.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SgJ-tO-oic">
                                                         <rect key="frame" x="30" y="15.333333333333332" width="40" height="39.333333333333343"/>
+                                                        <color key="tintColor" systemColor="opaqueSeparatorColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="40" id="T0a-Qa-KW3"/>
                                                             <constraint firstAttribute="height" constant="40" id="m9H-AP-axo"/>
@@ -264,14 +296,14 @@
             <objects>
                 <viewController id="Fzm-WX-1ZI" customClass="Site_ViewController" customModule="alarm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S3n-Hh-fpj">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="916"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CWf-rB-6rJ">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="916"/>
                                 <subviews>
                                     <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6P5-9p-Y9w">
-                                        <rect key="frame" x="0.0" y="0.0" width="428" height="876"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="866"/>
                                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <wkWebViewConfiguration key="configuration">
                                             <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -279,7 +311,7 @@
                                         </wkWebViewConfiguration>
                                     </wkWebView>
                                     <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2CP-FX-aDy">
-                                        <rect key="frame" x="0.0" y="876" width="428" height="50"/>
+                                        <rect key="frame" x="0.0" y="866" width="428" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="pSH-4H-RuL"/>
                                         </constraints>
@@ -381,7 +413,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                                 <connections>
-                                                    <segue destination="HhK-nC-e97" kind="presentation" id="Tiu-rj-sXy"/>
+                                                    <segue destination="HhK-nC-e97" kind="presentation" destinationCreationSelector="thursday_clicked:" id="Tiu-rj-sXy"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -446,11 +478,17 @@
         <image name="iphone.radiowaves.left.and.right" catalog="system" width="128" height="85"/>
         <image name="speaker.wave.2.fill" catalog="system" width="128" height="88"/>
         <image name="youtube" width="16.666666030883789" height="16.666666030883789"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

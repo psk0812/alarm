@@ -18,7 +18,9 @@ class youtube_alram_Controller:UIViewController,UIApplicationDelegate,DataDelega
     var recive_youtubeurl : URL?
     var recive_youtube_title : String?
     var youtube_siteVC : UIViewController?
-
+    
+  
+    
     
     
    
@@ -30,6 +32,7 @@ class youtube_alram_Controller:UIViewController,UIApplicationDelegate,DataDelega
     @IBOutlet var minutes_pick: minutes_PickerView!
     
     @IBOutlet var monday: UIButton!
+    
     @IBOutlet var tuesday: UIButton!
     @IBOutlet var wednesday: UIButton!
     @IBOutlet var thursday: UIButton!
@@ -46,11 +49,13 @@ class youtube_alram_Controller:UIViewController,UIApplicationDelegate,DataDelega
         self.caution_label.numberOfLines=0
         self.caution_label.text="주의! \n \n 유튜브가 실행되려면 와이파이나 데이터가 계속 연결된 상태여야 합니다. 만약 와이파이가 접속되지 않았다면,기본음이 들립니다."
         print("로드 완료")
-        print(recive_youtube_title)
+  
+      
         guard let vc = self.youtube_siteVC as? Site_ViewController else{
             return
         }
-        vc.checkRespose(str:"receive susss")
+       
+        
   
     }
     
@@ -62,16 +67,58 @@ class youtube_alram_Controller:UIViewController,UIApplicationDelegate,DataDelega
         // sendData 메서드를 프로토콜에 정의된대로 구현
         // 받은 데이터 및 URL을 처리하는 로직
         print("hello")
-        youtube_title.text = url.absoluteString
+        youtube_title.numberOfLines=0
+        youtube_title.text = string
         print("Received URL: \(url)")
         print("Received string: \(string)")
+
+
     }
     
+    //유튜브 사이트 데이터 받기
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationVC = segue.destination as? Site_ViewController {
             destinationVC.delegate = self
         }
     }
+    
 
+    @IBAction func monday_clicked(_ sender:UIButton) {
+        color_chage(sender)
+    }
+    
+    @IBAction func tuesday_clicked(_ sender:UIButton) {
+        color_chage(sender)
+    }
+    
+    @IBAction func wednesday_clicked(_ sender:UIButton) {
+        color_chage(sender)
+    }
+    
+    @IBAction func thursday_clicked(_ sender: UIButton) {
+        color_chage(sender)
+    }
+    
+    @IBAction func friday_clicked(_ sender: UIButton) {
+        color_chage(sender)
+    }
+    
+    @IBAction func saturday_clicked(_ sender: UIButton) {
+        color_chage(sender)
+    }
+    
+    @IBAction func sunday_clicked(_ sender: UIButton) {
+        color_chage(sender)
+    }
+    
+    
     
 }
+
+func color_chage(_ sender:UIButton){
+    if sender.tintColor == .systemGray{
+        sender.tintColor = .tintColor
+    }else{sender.tintColor = .systemGray}
+}
+
+

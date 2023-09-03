@@ -14,7 +14,8 @@ import UIKit
 class minutes_PickerView: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource {
 
     // 피커뷰에 표시될 데이터 배열
-    let pickerData = Array(1...60).map { String($0) } // 1부터 12까지의 숫자를 문자열로 변환
+    let pickerData = Array(0...59).map { String(format: "%02d", $0) }
+ // 1부터 12까지의 숫자를 문자열로 변환
     
     // 프로그래밍 방식으로 인스턴스를 생성할 때 호출됩니다.
     override init(frame: CGRect) {
