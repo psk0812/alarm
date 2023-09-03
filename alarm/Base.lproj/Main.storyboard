@@ -214,14 +214,12 @@
                                                             <constraint firstAttribute="width" constant="40" id="Rgu-Mv-XfD"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iphone.radiowaves.left.and.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SgJ-tO-oic">
-                                                        <rect key="frame" x="30" y="15.333333333333332" width="40" height="39.333333333333343"/>
-                                                        <color key="tintColor" systemColor="opaqueSeparatorColor"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="40" id="T0a-Qa-KW3"/>
-                                                            <constraint firstAttribute="height" constant="40" id="m9H-AP-axo"/>
-                                                        </constraints>
-                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twu-HL-sk1">
+                                                        <rect key="frame" x="0.0" y="15" width="75" height="35"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
@@ -232,8 +230,6 @@
                                                     <constraint firstItem="dQn-NF-CrE" firstAttribute="leading" secondItem="5o5-wC-wth" secondAttribute="leading" constant="80" id="OYG-kJ-oA1"/>
                                                     <constraint firstAttribute="bottom" secondItem="jpA-VT-JSd" secondAttribute="bottom" constant="20" id="Okc-hO-hCk"/>
                                                     <constraint firstAttribute="height" constant="70" id="Qoz-vT-THW"/>
-                                                    <constraint firstItem="SgJ-tO-oic" firstAttribute="leading" secondItem="5o5-wC-wth" secondAttribute="leading" constant="30" id="SRV-Ac-q1M"/>
-                                                    <constraint firstItem="SgJ-tO-oic" firstAttribute="centerY" secondItem="5o5-wC-wth" secondAttribute="centerY" id="YAS-eB-5lc"/>
                                                     <constraint firstItem="dQn-NF-CrE" firstAttribute="centerY" secondItem="5o5-wC-wth" secondAttribute="centerY" id="qdY-Nq-fgc"/>
                                                     <constraint firstItem="jpA-VT-JSd" firstAttribute="leading" secondItem="dQn-NF-CrE" secondAttribute="trailing" constant="20" id="w2T-Lb-k6Q"/>
                                                 </constraints>
@@ -270,13 +266,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ampm_pick" destination="AMp-6h-lNd" id="qf6-I9-td6"/>
+                        <outlet property="ampm_pick" destination="AMp-6h-lNd" id="8Le-mh-evB"/>
                         <outlet property="back_btn" destination="hOV-k1-BYh" id="giZ-YB-PRS"/>
                         <outlet property="caution_label" destination="6a5-gz-zfw" id="kGN-rf-4ij"/>
                         <outlet property="forward_btn" destination="hw8-zi-bav" id="fnI-VK-Vhm"/>
                         <outlet property="friday" destination="XIe-89-NxF" id="rzE-ST-FIC"/>
-                        <outlet property="hour_pick" destination="JCT-Ls-5EF" id="bZ8-t8-KHP"/>
-                        <outlet property="minutes_pick" destination="XGR-GV-j9u" id="uZy-ga-KN2"/>
+                        <outlet property="hour_pick" destination="JCT-Ls-5EF" id="Ktu-FI-SLQ"/>
+                        <outlet property="minutes_pick" destination="XGR-GV-j9u" id="ckv-xh-OxU"/>
                         <outlet property="monday" destination="Jms-yn-oDg" id="r8H-1t-T6t"/>
                         <outlet property="saturday" destination="aHe-ZV-ucF" id="pni-2q-sra"/>
                         <outlet property="sunday" destination="tQX-Di-IFN" id="zhb-WU-M7T"/>
@@ -475,12 +471,8 @@
     <resources>
         <image name="arrowshape.backward.fill" catalog="system" width="128" height="104"/>
         <image name="arrowshape.right.fill" catalog="system" width="128" height="104"/>
-        <image name="iphone.radiowaves.left.and.right" catalog="system" width="128" height="85"/>
         <image name="speaker.wave.2.fill" catalog="system" width="128" height="88"/>
         <image name="youtube" width="16.666666030883789" height="16.666666030883789"/>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

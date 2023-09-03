@@ -13,9 +13,9 @@
 		4506DBE72AA0B749008F2BFC /* youtube_alram_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506DBE62AA0B749008F2BFC /* youtube_alram_Controller.swift */; };
 		4506DBEA2AA0B954008F2BFC /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4506DBE92AA0B954008F2BFC /* WebKit.framework */; };
 		45C4C9E92AA358BD00261B63 /* youtube_site.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C4C9E82AA358BD00261B63 /* youtube_site.swift */; };
-		45D1172A2AA1A36900D3C22E /* ampm_pick_class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D117292AA1A36900D3C22E /* ampm_pick_class.swift */; };
-		45D1172C2AA1A5D200D3C22E /* hour_pick_class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D1172B2AA1A5D200D3C22E /* hour_pick_class.swift */; };
-		45D1172E2AA1A6C200D3C22E /* minutes_pick_class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D1172D2AA1A6C200D3C22E /* minutes_pick_class.swift */; };
+		45C4C9ED2AA481D300261B63 /* ampm_pick_class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C4C9EC2AA481D300261B63 /* ampm_pick_class.swift */; };
+		45C4C9EF2AA481DA00261B63 /* hour_pick_class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C4C9EE2AA481DA00261B63 /* hour_pick_class.swift */; };
+		45C4C9F12AA481DF00261B63 /* minutes_pick_class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C4C9F02AA481DF00261B63 /* minutes_pick_class.swift */; };
 		45E6FE9B2A9F67E2003F7E2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E6FE9A2A9F67E2003F7E2B /* AppDelegate.swift */; };
 		45E6FE9D2A9F67E2003F7E2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E6FE9C2A9F67E2003F7E2B /* SceneDelegate.swift */; };
 		45E6FE9F2A9F67E2003F7E2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E6FE9E2A9F67E2003F7E2B /* ViewController.swift */; };
@@ -52,9 +52,9 @@
 		4506DBE62AA0B749008F2BFC /* youtube_alram_Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = youtube_alram_Controller.swift; sourceTree = "<group>"; };
 		4506DBE92AA0B954008F2BFC /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		45C4C9E82AA358BD00261B63 /* youtube_site.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = youtube_site.swift; sourceTree = "<group>"; };
-		45D117292AA1A36900D3C22E /* ampm_pick_class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ampm_pick_class.swift; sourceTree = "<group>"; };
-		45D1172B2AA1A5D200D3C22E /* hour_pick_class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hour_pick_class.swift; sourceTree = "<group>"; };
-		45D1172D2AA1A6C200D3C22E /* minutes_pick_class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = minutes_pick_class.swift; sourceTree = "<group>"; };
+		45C4C9EC2AA481D300261B63 /* ampm_pick_class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ampm_pick_class.swift; sourceTree = "<group>"; };
+		45C4C9EE2AA481DA00261B63 /* hour_pick_class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hour_pick_class.swift; sourceTree = "<group>"; };
+		45C4C9F02AA481DF00261B63 /* minutes_pick_class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = minutes_pick_class.swift; sourceTree = SOURCE_ROOT; };
 		45E6FE972A9F67E2003F7E2B /* alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45E6FE9A2A9F67E2003F7E2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45E6FE9C2A9F67E2003F7E2B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,13 +109,13 @@
 			isa = PBXGroup;
 			children = (
 				45C4C9E82AA358BD00261B63 /* youtube_site.swift */,
-				45D1172D2AA1A6C200D3C22E /* minutes_pick_class.swift */,
-				45D1172B2AA1A5D200D3C22E /* hour_pick_class.swift */,
-				45D117292AA1A36900D3C22E /* ampm_pick_class.swift */,
 				4506DBE62AA0B749008F2BFC /* youtube_alram_Controller.swift */,
 				4506DBE42AA0AD56008F2BFC /* TabBar_Controller.swift */,
 				4506DBE22AA01EAB008F2BFC /* design.xcassets */,
 				4506DBE02AA00588008F2BFC /* youtube_Controller.swift */,
+				45C4C9EC2AA481D300261B63 /* ampm_pick_class.swift */,
+				45C4C9EE2AA481DA00261B63 /* hour_pick_class.swift */,
+				45C4C9F02AA481DF00261B63 /* minutes_pick_class.swift */,
 				45E6FE992A9F67E2003F7E2B /* alarm */,
 				45E6FEB32A9F67E3003F7E2B /* alarmTests */,
 				45E6FEBD2A9F67E3003F7E2B /* alarmUITests */,
@@ -300,14 +300,14 @@
 			files = (
 				4506DBE12AA00588008F2BFC /* youtube_Controller.swift in Sources */,
 				45E6FE9F2A9F67E2003F7E2B /* ViewController.swift in Sources */,
-				45D1172C2AA1A5D200D3C22E /* hour_pick_class.swift in Sources */,
-				45D1172E2AA1A6C200D3C22E /* minutes_pick_class.swift in Sources */,
+				45C4C9ED2AA481D300261B63 /* ampm_pick_class.swift in Sources */,
+				45C4C9EF2AA481DA00261B63 /* hour_pick_class.swift in Sources */,
 				45E6FE9B2A9F67E2003F7E2B /* AppDelegate.swift in Sources */,
+				45C4C9F12AA481DF00261B63 /* minutes_pick_class.swift in Sources */,
 				4506DBE52AA0AD56008F2BFC /* TabBar_Controller.swift in Sources */,
 				45C4C9E92AA358BD00261B63 /* youtube_site.swift in Sources */,
 				45E6FE9D2A9F67E2003F7E2B /* SceneDelegate.swift in Sources */,
 				45E6FEA52A9F67E2003F7E2B /* alarm.xcdatamodeld in Sources */,
-				45D1172A2AA1A36900D3C22E /* ampm_pick_class.swift in Sources */,
 				4506DBE72AA0B749008F2BFC /* youtube_alram_Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
