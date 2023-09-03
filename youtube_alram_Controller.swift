@@ -9,16 +9,23 @@ import Foundation
 import UIKit
 import WebKit
 
-
+protocol Final_DataDelegate: AnyObject {
+    func sendData(url: URL , title : String, ampm : String, hour : String, minutes : String)
+    func sendList(_ list: [String])
+}
 
 class youtube_alram_Controller:UIViewController,UIApplicationDelegate,DataDelegate{
+    weak var delegate: Final_DataDelegate?
+  
     //유튜브 데이터 받을 준비
     var window: UIWindow?
     
     var recive_youtubeurl : URL?
     var recive_youtube_title : String?
     var youtube_siteVC : UIViewController?
-    
+    var ampm : String?
+    var hour : String?
+    var minues : String?
     
     
     @IBOutlet var ampm_pick: ampm_PickerView!
@@ -57,9 +64,7 @@ class youtube_alram_Controller:UIViewController,UIApplicationDelegate,DataDelega
         print("로드 완료")
         
         
-        guard let vc = self.youtube_siteVC as? Site_ViewController else{
-            return
-        }
+   
         
         
         
@@ -75,19 +80,59 @@ class youtube_alram_Controller:UIViewController,UIApplicationDelegate,DataDelega
         print("hello")
         youtube_title.numberOfLines=0
         youtube_title.text = string
+        recive_youtube_title=string
+        recive_youtubeurl=url
         print("Received URL: \(url)")
         print("Received string: \(string)")
-        
-        
+ 
     }
     
     //유튜브 사이트 데이터 받기
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationVC = segue.destination as? Site_ViewController {
             destinationVC.delegate = self
         }
     }
     
+    @IBAction func send_data_to_alram(_ sender: Any) {
+        var url_send: URL?
+        var title_send: String?
+        var ampm_send: String?
+        var hour_send: String?
+        var minutes_send: String?
+
+        if let url = recive_youtubeurl {
+            url_send = url
+        } else {
+            print("recive_youtubeurl is nil")
+            return // 중단하거나 에러 처리
+        }
+
+        if let title = recive_youtube_title {
+            title_send = title
+        } else {
+            print("recive_title is nil")
+            return // 중단하거나 에러 처리
+        }
+
+        let selectedRow = ampm_pick.selectedRow(inComponent: 0)
+        ampm_send = ampm_pick.pickerData[selectedRow]
+
+        let hour_selectedRow = hour_pick.selectedRow(inComponent: 0)
+        hour_send = hour_pick.pickerData[hour_selectedRow]
+
+        let minutes_selectedRow = minutes_pick.selectedRow(inComponent: 0)
+        minutes_send = minutes_pick.pickerData[minutes_selectedRow]
+
+        if let urlToSend = url_send, let titleToSend = title_send, let ampmToSend = ampm_send, let hourToSend = hour_send, let minutesToSend = minutes_send {
+            self.delegate?.sendData(url: urlToSend, title: titleToSend, ampm: ampmToSend, hour: hourToSend, minutes: minutesToSend)
+            self.dismiss(animated: true)
+        } else {
+            print("Error: Some data is missing")
+            // 에러 처리 로직 추가
+        }
+    }
     
     @IBAction func monday_clicked(_ sender:UIButton) {
         color_chage(sender)
@@ -117,12 +162,14 @@ class youtube_alram_Controller:UIViewController,UIApplicationDelegate,DataDelega
         color_chage(sender)
     }
     
-    
-    
-    
-    @IBAction func vibrate_clicked(_ sender: UIButton) {
+    @IBAction func bibrate_clicked(_ sender: UIButton) {
         color_chage(sender)
     }
+    
+    
+  
+    
+    
     
     
     

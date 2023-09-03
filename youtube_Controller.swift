@@ -9,7 +9,22 @@ import Foundation
 import UIKit
 import WebKit
 
-class YoutubeController: UIViewController {
+class YoutubeController: UIViewController, Final_DataDelegate{
+
+    func sendList(_ list: [String]) {
+        print("list_hello")
+        print(list)
+    }
+    
+    func sendData(url: URL, title: String, ampm: String, hour: String, minutes: String) {
+        print("Received URL: \(url)")
+        print("Received Title: \(title)")
+        print("Received AM/PM: \(ampm)")
+        print("Received Hour: \(hour)")
+        print("Received Minutes: \(minutes)")
+    }
+
+    
     @IBOutlet var background_View: UIView!
 
     @IBOutlet var alaram_tableview: UITableView!
@@ -49,6 +64,17 @@ class YoutubeController: UIViewController {
         button_view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.5) // 여기서 alpha 값을 조절하여 투명도를 조절
         alram_plus_btn.setTitle("유튜브 알람추가", for: .normal)
         alram_plus_btn.sizeToFit()
+        
+    
+        }
+    
+    //유튜브 사이트 데이터 받기
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destination as? youtube_alram_Controller {
+            destinationVC.delegate = self
+        }
+            
+        }
        
-    }
+    
 }

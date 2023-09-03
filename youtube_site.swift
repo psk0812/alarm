@@ -76,9 +76,7 @@ class Site_ViewController: UIViewController {
         self.dismiss( animated: true)
         
         }
-    func checkRespose(str : String) -> Void {
-           print("잘 받았나? :\(str)")
-       }
+
     
     }
     
