@@ -13,7 +13,7 @@ protocol DataDelegate: AnyObject {
     func sendData(url: URL, string: String)
 }
 
-class Site_ViewController: UIViewController {
+class Site_ViewController: UIViewController{
     weak var delegate: DataDelegate?
 
   
