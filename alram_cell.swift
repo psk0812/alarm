@@ -17,6 +17,7 @@ class MyTableViewCell:UITableViewCell{
     @IBOutlet var alarm_view: UIView!
     
     
+    @IBOutlet var alarm_title: UILabel!
     
     
     //셀이 렌더링 될때

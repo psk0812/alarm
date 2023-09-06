@@ -72,6 +72,7 @@
             </constraints>
             <connections>
                 <outlet property="Content_View" destination="yqL-JY-P0d" id="Q8q-g8-cdB"/>
+                <outlet property="alarm_title" destination="HBB-B0-mfC" id="Y0a-eA-01L"/>
                 <outlet property="alarm_view" destination="0RB-uJ-tdp" id="js9-Jt-5sS"/>
                 <outlet property="alram_time" destination="xTa-tu-w1p" id="DUU-RK-ZuE"/>
             </connections>

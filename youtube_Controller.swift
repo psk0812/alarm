@@ -22,10 +22,15 @@ class YoutubeController: UIViewController, Final_DataDelegate, UITableViewDataSo
         print("Received AM/PM: \(ampm)")
         print("Received Hour: \(hour)")
         print("Received Minutes: \(minutes)")
+        let combinedString = "\(ampm) \(hour):\(minutes)"
+        timeArray.append(combinedString)
+        titleArray.append(title)
+        alram_tableview.reloadData()
     }
 
 
     var timeArray: [Any] = [] // 데이터 배열 초기화
+    var titleArray: [Any] = [] // 데이터 배열 초기화
   
 
    
@@ -40,18 +45,11 @@ class YoutubeController: UIViewController, Final_DataDelegate, UITableViewDataSo
     @IBOutlet var Good_day: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        timeArray.append("오전 12:00") // 예시 데이터 추가
-        timeArray.append("오전 12:00") // 예시 데이터 추가
-        timeArray.append("오전 12:00") // 예시 데이터 추가
-
-
-        
         alram_tableview.dataSource = self
         alram_tableview.delegate = self
         alram_tableview.register(UINib(nibName: "youtube_cell", bundle: nil), forCellReuseIdentifier: "MyTableViewCell")
-        
 
-       
+
         
         // 이미지를 생성하여 배경 뷰에 설정
         // 이미지를 Asset Catalog에서 가져오기
@@ -106,13 +104,16 @@ class YoutubeController: UIViewController, Final_DataDelegate, UITableViewDataSo
         if let data = timeArray[indexPath.row] as? String {
             cell.alram_time.text = data
         }
+        if let data = titleArray[indexPath.row] as? String {
+            cell.alarm_title.text = data
+        }
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        // 여기서 각 셀의 높이를 동적으로 계산하여 반환합니다.
-        // 예를 들어, 콘텐츠에 맞게 적절한 높이를 계산하거나 고정된 높이를 지정할 수 있습니다.
-        return 80.0 // 예시: 고정된 높이
+        //각 셀의 높이
+        
+        return 80.0 //
     }
     
 }
