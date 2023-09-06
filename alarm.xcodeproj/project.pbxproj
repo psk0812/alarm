@@ -16,6 +16,8 @@
 		45C4C9ED2AA481D300261B63 /* ampm_pick_class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C4C9EC2AA481D300261B63 /* ampm_pick_class.swift */; };
 		45C4C9EF2AA481DA00261B63 /* hour_pick_class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C4C9EE2AA481DA00261B63 /* hour_pick_class.swift */; };
 		45C4C9F12AA481DF00261B63 /* minutes_pick_class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C4C9F02AA481DF00261B63 /* minutes_pick_class.swift */; };
+		45C4C9F32AA6B00F00261B63 /* youtube_cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45C4C9F22AA6B00F00261B63 /* youtube_cell.xib */; };
+		45C4C9F52AA7E9B600261B63 /* alram_cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C4C9F42AA7E9B600261B63 /* alram_cell.swift */; };
 		45E6FE9B2A9F67E2003F7E2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E6FE9A2A9F67E2003F7E2B /* AppDelegate.swift */; };
 		45E6FE9D2A9F67E2003F7E2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E6FE9C2A9F67E2003F7E2B /* SceneDelegate.swift */; };
 		45E6FE9F2A9F67E2003F7E2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E6FE9E2A9F67E2003F7E2B /* ViewController.swift */; };
@@ -55,6 +57,8 @@
 		45C4C9EC2AA481D300261B63 /* ampm_pick_class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ampm_pick_class.swift; sourceTree = "<group>"; };
 		45C4C9EE2AA481DA00261B63 /* hour_pick_class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hour_pick_class.swift; sourceTree = "<group>"; };
 		45C4C9F02AA481DF00261B63 /* minutes_pick_class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = minutes_pick_class.swift; sourceTree = SOURCE_ROOT; };
+		45C4C9F22AA6B00F00261B63 /* youtube_cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = youtube_cell.xib; sourceTree = "<group>"; };
+		45C4C9F42AA7E9B600261B63 /* alram_cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alram_cell.swift; sourceTree = "<group>"; };
 		45E6FE972A9F67E2003F7E2B /* alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45E6FE9A2A9F67E2003F7E2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45E6FE9C2A9F67E2003F7E2B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 		45E6FE8E2A9F67E2003F7E2B = {
 			isa = PBXGroup;
 			children = (
+				45C4C9F42AA7E9B600261B63 /* alram_cell.swift */,
+				45C4C9F22AA6B00F00261B63 /* youtube_cell.xib */,
 				45C4C9E82AA358BD00261B63 /* youtube_site.swift */,
 				4506DBE62AA0B749008F2BFC /* youtube_alram_Controller.swift */,
 				4506DBE42AA0AD56008F2BFC /* TabBar_Controller.swift */,
@@ -272,6 +278,7 @@
 			files = (
 				45E6FEAA2A9F67E3003F7E2B /* LaunchScreen.storyboard in Resources */,
 				4506DBE32AA01EAB008F2BFC /* design.xcassets in Resources */,
+				45C4C9F32AA6B00F00261B63 /* youtube_cell.xib in Resources */,
 				45E6FEA72A9F67E3003F7E2B /* Assets.xcassets in Resources */,
 				45E6FEA22A9F67E2003F7E2B /* Main.storyboard in Resources */,
 			);
@@ -309,6 +316,7 @@
 				45E6FE9D2A9F67E2003F7E2B /* SceneDelegate.swift in Sources */,
 				45E6FEA52A9F67E2003F7E2B /* alarm.xcdatamodeld in Sources */,
 				4506DBE72AA0B749008F2BFC /* youtube_alram_Controller.swift in Sources */,
+				45C4C9F52AA7E9B600261B63 /* alram_cell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

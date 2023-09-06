@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import WebKit
 
-class YoutubeController: UIViewController, Final_DataDelegate{
+class YoutubeController: UIViewController, Final_DataDelegate, UITableViewDataSource, UITableViewDelegate{
 
     func sendList(_ list: [String]) {
         print("list_hello")
@@ -24,10 +24,14 @@ class YoutubeController: UIViewController, Final_DataDelegate{
         print("Received Minutes: \(minutes)")
     }
 
-    
+
+    var dataArray: [Any] = [] // 데이터 배열 초기화
+  
+
+   
     @IBOutlet var background_View: UIView!
 
-    @IBOutlet var alaram_tableview: UITableView!
+    @IBOutlet var alram_tableview: UITableView!
     
     @IBOutlet var button_view: UIView!
     
@@ -36,6 +40,25 @@ class YoutubeController: UIViewController, Final_DataDelegate{
     @IBOutlet var Good_day: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        dataArray.append("오전 12:00") // 예시 데이터 추가
+        dataArray.append("오전 12:00") // 예시 데이터 추가
+        dataArray.append("오전 12:00") // 예시 데이터 추가
+        dataArray.append("오전 12:00") // 예시 데이터 추가
+        dataArray.append("오전 12:00") // 예시 데이터 추가
+        dataArray.append("오전 12:00") // 예시 데이터 추가
+        dataArray.append("오전 12:00") // 예시 데이터 추가
+        dataArray.append("오전 12:00") // 예시 데이터 추가
+        dataArray.append("오전 12:00") // 예시 데이터 추가
+        dataArray.append("오전 12:00") // 예시 데이터 추가
+
+        
+        alram_tableview.dataSource = self
+        alram_tableview.delegate = self
+        alram_tableview.register(UINib(nibName: "youtube_cell", bundle: nil), forCellReuseIdentifier: "MyTableViewCell")
+        
+
+       
+        
         // 이미지를 생성하여 배경 뷰에 설정
         // 이미지를 Asset Catalog에서 가져오기
         let backgroundImage = UIImage(named: "night_sky")
@@ -59,7 +82,7 @@ class YoutubeController: UIViewController, Final_DataDelegate{
         Good_day?.text="당신의 아침이 \n 즐겁게 시작되길 바랍니다"
         
         
-        alaram_tableview.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.5) // 여기서 alpha 값을 조절하여 투명도를 조절
+        alram_tableview.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.5) // 여기서 alpha 값을 조절하여 투명도를 조절
         
         button_view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.5) // 여기서 alpha 값을 조절하여 투명도를 조절
         alram_plus_btn.setTitle("유튜브 알람추가", for: .normal)
@@ -76,5 +99,31 @@ class YoutubeController: UIViewController, Final_DataDelegate{
             
         }
        
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataArray.count // 데이터 배열의 개수만큼 행 반환
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyTableViewCell", for: indexPath) as! MyTableViewCell
+        
+        // 테이블 셀의 배경색을 투명하게 설정
+        cell.backgroundColor = UIColor.clear
+        // 셀에 데이터 배열의 내용 표시
+        if let data = dataArray[indexPath.row] as? String {
+            cell.alram_time.text = data
+        }
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        // 여기서 각 셀의 높이를 동적으로 계산하여 반환합니다.
+        // 예를 들어, 콘텐츠에 맞게 적절한 높이를 계산하거나 고정된 높이를 지정할 수 있습니다.
+        return 80.0 // 예시: 고정된 높이
+    }
     
 }
+
+
+
+
+

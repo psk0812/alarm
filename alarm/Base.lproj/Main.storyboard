@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AuS-Ca-BML">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bbj-la-IRF">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -451,8 +451,8 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="Good_day" destination="lYw-eG-IxP" id="upG-6P-4P7"/>
-                        <outlet property="alaram_tableview" destination="Md4-0v-sgC" id="sM2-gk-pfh"/>
                         <outlet property="alram_plus_btn" destination="q77-hL-PKR" id="bM4-TU-5WA"/>
+                        <outlet property="alram_tableview" destination="Md4-0v-sgC" id="hCb-tX-nuy"/>
                         <outlet property="background_View" destination="j7u-PY-WqU" id="a8X-KK-olH"/>
                         <outlet property="button_view" destination="Ehe-ZX-JYi" id="Rc7-QW-qC2"/>
                     </connections>
