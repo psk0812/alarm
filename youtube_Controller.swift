@@ -25,7 +25,7 @@ class YoutubeController: UIViewController, Final_DataDelegate, UITableViewDataSo
     }
 
 
-    var dataArray: [Any] = [] // 데이터 배열 초기화
+    var timeArray: [Any] = [] // 데이터 배열 초기화
   
 
    
@@ -40,16 +40,10 @@ class YoutubeController: UIViewController, Final_DataDelegate, UITableViewDataSo
     @IBOutlet var Good_day: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        dataArray.append("오전 12:00") // 예시 데이터 추가
-        dataArray.append("오전 12:00") // 예시 데이터 추가
-        dataArray.append("오전 12:00") // 예시 데이터 추가
-        dataArray.append("오전 12:00") // 예시 데이터 추가
-        dataArray.append("오전 12:00") // 예시 데이터 추가
-        dataArray.append("오전 12:00") // 예시 데이터 추가
-        dataArray.append("오전 12:00") // 예시 데이터 추가
-        dataArray.append("오전 12:00") // 예시 데이터 추가
-        dataArray.append("오전 12:00") // 예시 데이터 추가
-        dataArray.append("오전 12:00") // 예시 데이터 추가
+        timeArray.append("오전 12:00") // 예시 데이터 추가
+        timeArray.append("오전 12:00") // 예시 데이터 추가
+        timeArray.append("오전 12:00") // 예시 데이터 추가
+
 
         
         alram_tableview.dataSource = self
@@ -100,7 +94,7 @@ class YoutubeController: UIViewController, Final_DataDelegate, UITableViewDataSo
         }
        
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataArray.count // 데이터 배열의 개수만큼 행 반환
+        return timeArray.count // 데이터 배열의 개수만큼 행 반환
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -109,7 +103,7 @@ class YoutubeController: UIViewController, Final_DataDelegate, UITableViewDataSo
         // 테이블 셀의 배경색을 투명하게 설정
         cell.backgroundColor = UIColor.clear
         // 셀에 데이터 배열의 내용 표시
-        if let data = dataArray[indexPath.row] as? String {
+        if let data = timeArray[indexPath.row] as? String {
             cell.alram_time.text = data
         }
         return cell
