@@ -19,6 +19,7 @@ class MyTableViewCell:UITableViewCell{
     
     @IBOutlet var alarm_title: UILabel!
     
+    @IBOutlet var alram_day: UILabel!
     
     //셀이 렌더링 될때
     override func awakeFromNib(){
@@ -26,11 +27,14 @@ class MyTableViewCell:UITableViewCell{
         super.awakeFromNib()
         alarm_view.layer.borderWidth = 2 // 테두리 적용
         alarm_view.layer.cornerRadius=5
-        
-    
-        
 
-       
     }
+    
+  
+
+
+
+
+
     
 }

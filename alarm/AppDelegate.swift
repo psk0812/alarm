@@ -32,6 +32,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
+        // 백그라운드 또는 종료 상태에서 알람이 트리거될 때 실행됩니다.
+        // 알람에 대한 처리 작업을 수행합니다.
+        
+        // 알람이 트리거되면 "alram_ing" 컨트롤러로 이동
+        if let window = UIApplication.shared.windows.first,
+           let storyboard = window.rootViewController?.storyboard,
+           let alramIngController = storyboard.instantiateViewController(withIdentifier: "alram_ing") as? AlramIngViewController {
+            // YourAlramIngViewController는 실제 컨트롤러 이름으로 변경해야 합니다.
+            
+            // 필요한 설정을 수행하고 컨트롤러를 표시
+            // 예: 데이터 전달, 네비게이션 컨트롤러로 이동 등
+            
+            // 알람이 트리거되면 컨트롤러를 표시
+            window.rootViewController = alramIngController
+            window.makeKeyAndVisible()
+        }
+    }
 
     // MARK: - Core Data stack
 

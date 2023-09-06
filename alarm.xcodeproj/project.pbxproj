@@ -12,6 +12,7 @@
 		4506DBE52AA0AD56008F2BFC /* TabBar_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506DBE42AA0AD56008F2BFC /* TabBar_Controller.swift */; };
 		4506DBE72AA0B749008F2BFC /* youtube_alram_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506DBE62AA0B749008F2BFC /* youtube_alram_Controller.swift */; };
 		4506DBEA2AA0B954008F2BFC /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4506DBE92AA0B954008F2BFC /* WebKit.framework */; };
+		45839D482AA843BA00BBE821 /* alram_ing_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45839D472AA843BA00BBE821 /* alram_ing_Controller.swift */; };
 		45C4C9E92AA358BD00261B63 /* youtube_site.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C4C9E82AA358BD00261B63 /* youtube_site.swift */; };
 		45C4C9ED2AA481D300261B63 /* ampm_pick_class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C4C9EC2AA481D300261B63 /* ampm_pick_class.swift */; };
 		45C4C9EF2AA481DA00261B63 /* hour_pick_class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C4C9EE2AA481DA00261B63 /* hour_pick_class.swift */; };
@@ -53,6 +54,7 @@
 		4506DBE42AA0AD56008F2BFC /* TabBar_Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar_Controller.swift; sourceTree = "<group>"; };
 		4506DBE62AA0B749008F2BFC /* youtube_alram_Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = youtube_alram_Controller.swift; sourceTree = "<group>"; };
 		4506DBE92AA0B954008F2BFC /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		45839D472AA843BA00BBE821 /* alram_ing_Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alram_ing_Controller.swift; sourceTree = "<group>"; };
 		45C4C9E82AA358BD00261B63 /* youtube_site.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = youtube_site.swift; sourceTree = "<group>"; };
 		45C4C9EC2AA481D300261B63 /* ampm_pick_class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ampm_pick_class.swift; sourceTree = "<group>"; };
 		45C4C9EE2AA481DA00261B63 /* hour_pick_class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hour_pick_class.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 		45E6FE8E2A9F67E2003F7E2B = {
 			isa = PBXGroup;
 			children = (
+				45839D472AA843BA00BBE821 /* alram_ing_Controller.swift */,
 				45C4C9F42AA7E9B600261B63 /* alram_cell.swift */,
 				45C4C9F22AA6B00F00261B63 /* youtube_cell.xib */,
 				45C4C9E82AA358BD00261B63 /* youtube_site.swift */,
@@ -309,6 +312,7 @@
 				45E6FE9F2A9F67E2003F7E2B /* ViewController.swift in Sources */,
 				45C4C9ED2AA481D300261B63 /* ampm_pick_class.swift in Sources */,
 				45C4C9EF2AA481DA00261B63 /* hour_pick_class.swift in Sources */,
+				45839D482AA843BA00BBE821 /* alram_ing_Controller.swift in Sources */,
 				45E6FE9B2A9F67E2003F7E2B /* AppDelegate.swift in Sources */,
 				45C4C9F12AA481DF00261B63 /* minutes_pick_class.swift in Sources */,
 				4506DBE52AA0AD56008F2BFC /* TabBar_Controller.swift in Sources */,

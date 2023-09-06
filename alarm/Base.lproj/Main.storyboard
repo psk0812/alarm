@@ -387,6 +387,21 @@
             </objects>
             <point key="canvasLocation" x="630" y="312"/>
         </scene>
+        <!--AlramIngViewController-->
+        <scene sceneID="5j0-le-XKv">
+            <objects>
+                <viewController id="OSB-ZS-2tF" userLabel="AlramIngViewController" customClass="AlramIngViewController" customModule="alarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bSR-1z-U4v">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="IQU-kI-Er1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rm8-k2-9HL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1780" y="781"/>
+        </scene>
         <!--youtube_controller-->
         <scene sceneID="0on-p3-OOH">
             <objects>

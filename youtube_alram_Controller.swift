@@ -11,7 +11,7 @@ import WebKit
 
 protocol Final_DataDelegate: AnyObject {
     func sendData(url: URL , title : String, ampm : String, hour : String, minutes : String)
-    func sendList(_ list: [String])
+    func sendList(_ list: [Int])
 }
 
 class youtube_alram_Controller:UIViewController,UIApplicationDelegate,DataDelegate{
@@ -26,6 +26,7 @@ class youtube_alram_Controller:UIViewController,UIApplicationDelegate,DataDelega
     var ampm : String?
     var hour : String?
     var minues : String?
+    var dayarray : [Int]=[]
     
     
     @IBOutlet var ampm_pick: ampm_PickerView!
@@ -51,7 +52,7 @@ class youtube_alram_Controller:UIViewController,UIApplicationDelegate,DataDelega
     @IBOutlet var youtube_title: UILabel!
     @IBOutlet var caution_label: UILabel!
     
-    
+    var array_send : [Int] = []
  
     
     override func viewDidLoad() {
@@ -77,15 +78,12 @@ class youtube_alram_Controller:UIViewController,UIApplicationDelegate,DataDelega
     func sendData(url: URL, string: String) {
         // sendData 메서드를 프로토콜에 정의된대로 구현
         // 받은 데이터 및 URL을 처리하는 로직
-        print("hello")
         youtube_title.numberOfLines=0
         youtube_title.text = string
         recive_youtube_title=string
         recive_youtubeurl=url
-        print("Received URL: \(url)")
-        print("Received string: \(string)")
- 
     }
+    
     
     //유튜브 사이트 데이터 받기
 
@@ -101,6 +99,7 @@ class youtube_alram_Controller:UIViewController,UIApplicationDelegate,DataDelega
         var ampm_send: String?
         var hour_send: String?
         var minutes_send: String?
+        
 
         if let url = recive_youtubeurl {
             url_send = url
@@ -115,6 +114,10 @@ class youtube_alram_Controller:UIViewController,UIApplicationDelegate,DataDelega
             print("recive_title is nil")
             return // 중단하거나 에러 처리
         }
+    
+
+        
+
 
         let selectedRow = ampm_pick.selectedRow(inComponent: 0)
         ampm_send = ampm_pick.pickerData[selectedRow]
@@ -127,6 +130,7 @@ class youtube_alram_Controller:UIViewController,UIApplicationDelegate,DataDelega
 
         if let urlToSend = url_send, let titleToSend = title_send, let ampmToSend = ampm_send, let hourToSend = hour_send, let minutesToSend = minutes_send {
             self.delegate?.sendData(url: urlToSend, title: titleToSend, ampm: ampmToSend, hour: hourToSend, minutes: minutesToSend)
+            self.delegate?.sendList(array_send)
             self.dismiss(animated: true)
         } else {
             print("Error: Some data is missing")
@@ -135,34 +139,64 @@ class youtube_alram_Controller:UIViewController,UIApplicationDelegate,DataDelega
     }
     
     @IBAction func monday_clicked(_ sender:UIButton) {
+        if array_send.contains(2) {
+            array_send.removeAll { $0 == 2 }
+        }else
+        {array_send.append(2)}
         color_chage(sender)
     }
     
     @IBAction func tuesday_clicked(_ sender:UIButton) {
+        if array_send.contains(3) {
+            array_send.removeAll { $0 == 3 }
+        }else
+        {array_send.append(3)}
         color_chage(sender)
     }
     
     @IBAction func wednesday_clicked(_ sender:UIButton) {
+        if array_send.contains(4) {
+            array_send.removeAll { $0 == 4 }
+        }else
+        {array_send.append(4)}
         color_chage(sender)
     }
     
     @IBAction func thursday_clicked(_ sender: UIButton) {
+        if array_send.contains(5) {
+            array_send.removeAll { $0 == 5 }
+        }else
+        {array_send.append(5)}
         color_chage(sender)
     }
     
     @IBAction func friday_clicked(_ sender: UIButton) {
+        if array_send.contains(6) {
+            array_send.removeAll { $0 == 6 }
+        }else
+        {array_send.append(6)}
         color_chage(sender)
     }
-    
     @IBAction func saturday_clicked(_ sender: UIButton) {
+        if array_send.contains(7) {
+            array_send.removeAll { $0 == 7 }
+        }else
+        {array_send.append(7)}
         color_chage(sender)
     }
-    
     @IBAction func sunday_clicked(_ sender: UIButton) {
+        if array_send.contains(0) {
+            array_send.removeAll { $0 == 0 }
+        }else
+        {array_send.append(0)}
         color_chage(sender)
     }
     
     @IBAction func bibrate_clicked(_ sender: UIButton) {
+        if array_send.contains(1) {
+            array_send.removeAll { $0 == 1 }
+        }else
+        {array_send.append(1)}
         color_chage(sender)
     }
     
@@ -171,18 +205,17 @@ class youtube_alram_Controller:UIViewController,UIApplicationDelegate,DataDelega
     
     
     
+    func color_chage(_ sender:UIButton){
+        if sender.tintColor == .systemGray{
+            sender.tintColor = .tintColor
+
+        }else{sender.tintColor = .systemGray}
+    }
     
-    
-    
-    
-    
+
     
 }
 
-func color_chage(_ sender:UIButton){
-    if sender.tintColor == .systemGray{
-        sender.tintColor = .tintColor
-    }else{sender.tintColor = .systemGray}
-}
+
 
 
