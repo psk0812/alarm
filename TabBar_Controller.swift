@@ -17,6 +17,17 @@ class TabBar_Controller: UITabBarController {
         tabBar.barTintColor = UIColor.black
         // 탭바 아이템 폰트와 아이템 색상 변경
         UITabBar.appearance().tintColor = .yellow
+        
+        if let items = tabBar.items {
+            for item in items {
+                // 타이틀 폰트 크기 설정
+                item.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)], for: .normal)
+                item.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)], for: .selected)
+            }
+        }
+        
       
+
+
     }
 }

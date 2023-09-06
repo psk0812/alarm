@@ -13,6 +13,7 @@ class MyTableViewCell:UITableViewCell{
     @IBOutlet var Content_View: UIView!
     @IBOutlet var alram_time: UILabel!
     
+    @IBOutlet var alram_vibrate: UIImageView!
     
     @IBOutlet var alarm_view: UIView!
     

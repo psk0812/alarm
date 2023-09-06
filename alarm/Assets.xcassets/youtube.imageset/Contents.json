@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "icons8-유튜브-재생-50.png",
+      "filename" : "iconmonstr-youtube-6.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "icons8-유튜브-재생-50 1.png",
+      "filename" : "iconmonstr-youtube-6 1.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "icons8-유튜브-재생-50 2.png",
+      "filename" : "iconmonstr-youtube-6 2.svg",
       "idiom" : "universal",
       "scale" : "3x"
     }

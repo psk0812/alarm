@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 
 protocol Final_DataDelegate: AnyObject {
-    func sendData(url: URL , title : String, ampm : String, hour : String, minutes : String)
+    func sendData(url: URL , title : String, ampm : String, hour : String, minutes : String, check : Bool)
     func sendList(_ list: [Int])
 }
 
@@ -27,6 +27,7 @@ class youtube_alram_Controller:UIViewController,UIApplicationDelegate,DataDelega
     var hour : String?
     var minues : String?
     var dayarray : [Int]=[]
+    var check_vibrate : Bool = false
     
     
     @IBOutlet var ampm_pick: ampm_PickerView!
@@ -114,6 +115,7 @@ class youtube_alram_Controller:UIViewController,UIApplicationDelegate,DataDelega
             print("recive_title is nil")
             return // 중단하거나 에러 처리
         }
+        
     
 
         
@@ -129,7 +131,7 @@ class youtube_alram_Controller:UIViewController,UIApplicationDelegate,DataDelega
         minutes_send = minutes_pick.pickerData[minutes_selectedRow]
 
         if let urlToSend = url_send, let titleToSend = title_send, let ampmToSend = ampm_send, let hourToSend = hour_send, let minutesToSend = minutes_send {
-            self.delegate?.sendData(url: urlToSend, title: titleToSend, ampm: ampmToSend, hour: hourToSend, minutes: minutesToSend)
+            self.delegate?.sendData(url: urlToSend, title: titleToSend, ampm: ampmToSend, hour: hourToSend, minutes: minutesToSend, check: check_vibrate)
             self.delegate?.sendList(array_send)
             self.dismiss(animated: true)
         } else {
@@ -185,19 +187,20 @@ class youtube_alram_Controller:UIViewController,UIApplicationDelegate,DataDelega
         color_chage(sender)
     }
     @IBAction func sunday_clicked(_ sender: UIButton) {
-        if array_send.contains(0) {
-            array_send.removeAll { $0 == 0 }
-        }else
-        {array_send.append(0)}
-        color_chage(sender)
-    }
-    
-    @IBAction func bibrate_clicked(_ sender: UIButton) {
         if array_send.contains(1) {
             array_send.removeAll { $0 == 1 }
         }else
         {array_send.append(1)}
         color_chage(sender)
+    }
+    
+    @IBAction func bibrate_clicked(_ sender: UIButton) {
+     
+        color_chage(sender)
+        if check_vibrate==true
+        {check_vibrate=false}
+        else
+        {check_vibrate=true}
     }
     
     

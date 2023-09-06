@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bbj-la-IRF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AuS-Ca-BML">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -18,7 +18,7 @@
                         <viewLayoutGuide key="safeArea" id="6Rh-3j-zEX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="txz-ep-Sag"/>
+                    <tabBarItem key="tabBarItem" title="Useful" image="useful" id="txz-ep-Sag"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9j9-da-Nf9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -371,7 +371,7 @@
             </objects>
             <point key="canvasLocation" x="1984" y="-34"/>
         </scene>
-        <!--Item 2-->
+        <!--Earphone-->
         <scene sceneID="WYm-cc-mbw">
             <objects>
                 <viewController id="Dd6-Ub-gkf" sceneMemberID="viewController">
@@ -381,7 +381,7 @@
                         <viewLayoutGuide key="safeArea" id="dMt-g9-80k"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="bgK-rR-Con"/>
+                    <tabBarItem key="tabBarItem" title="Earphone" image="earphone" id="bgK-rR-Con"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2rP-bG-v2t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -411,7 +411,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7fR-6U-W6l">
-                                <rect key="frame" x="0.0" y="47" width="428" height="796"/>
+                                <rect key="frame" x="0.0" y="47" width="428" height="786"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYw-eG-IxP">
                                         <rect key="frame" x="0.0" y="0.0" width="428" height="110"/>
@@ -426,11 +426,11 @@
                                         </variation>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Md4-0v-sgC">
-                                        <rect key="frame" x="0.0" y="110" width="428" height="626"/>
+                                        <rect key="frame" x="0.0" y="110" width="428" height="616"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ehe-ZX-JYi">
-                                        <rect key="frame" x="0.0" y="736" width="428" height="60"/>
+                                        <rect key="frame" x="0.0" y="726" width="428" height="60"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q77-hL-PKR">
                                                 <rect key="frame" x="336" y="13" width="75" height="34.333333333333336"/>
@@ -458,7 +458,7 @@
                             <constraint firstItem="VTQ-LK-7o3" firstAttribute="trailing" secondItem="7fR-6U-W6l" secondAttribute="trailing" id="5sy-u1-wAn"/>
                             <constraint firstItem="7fR-6U-W6l" firstAttribute="top" secondItem="VTQ-LK-7o3" secondAttribute="top" id="9F9-8W-oOf"/>
                             <constraint firstItem="7fR-6U-W6l" firstAttribute="leading" secondItem="VTQ-LK-7o3" secondAttribute="leading" id="TzR-8I-StN"/>
-                            <constraint firstItem="VTQ-LK-7o3" firstAttribute="bottom" secondItem="7fR-6U-W6l" secondAttribute="bottom" id="doo-tC-GYb"/>
+                            <constraint firstItem="VTQ-LK-7o3" firstAttribute="bottom" secondItem="7fR-6U-W6l" secondAttribute="bottom" constant="10" id="doo-tC-GYb"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Youtube" image="youtube" id="xtW-T3-rdi">
@@ -499,9 +499,11 @@
     <resources>
         <image name="arrowshape.backward.fill" catalog="system" width="128" height="104"/>
         <image name="arrowshape.right.fill" catalog="system" width="128" height="104"/>
+        <image name="earphone" width="24" height="24"/>
         <image name="iphone.gen2.radiowaves.left.and.right" catalog="system" width="128" height="85"/>
         <image name="speaker.wave.2.fill" catalog="system" width="128" height="88"/>
-        <image name="youtube" width="16.666666030883789" height="16.666666030883789"/>
+        <image name="useful" width="24" height="24"/>
+        <image name="youtube" width="24" height="24"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

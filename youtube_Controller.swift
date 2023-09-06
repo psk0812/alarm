@@ -39,7 +39,7 @@ class YoutubeController: UIViewController, Final_DataDelegate, UITableViewDataSo
 
     }
     
-    func sendData(url: URL, title: String, ampm: String, hour: String, minutes: String) {
+    func sendData(url: URL, title: String, ampm: String, hour: String, minutes: String, check : Bool) {
 
         let combinedString = "\(ampm) \(hour):\(minutes)"
         alram_url = url.absoluteString
@@ -47,6 +47,7 @@ class YoutubeController: UIViewController, Final_DataDelegate, UITableViewDataSo
         alram_hour = Int(hour)!
         alram_minutes = Int(hour)!
         alram_title = title
+        alram_vibrate = check
         
         //테이블 리로드
         timeArray.append(combinedString)
@@ -70,6 +71,7 @@ class YoutubeController: UIViewController, Final_DataDelegate, UITableViewDataSo
     var alram_hour : Int = 0
     var alram_minutes : Int = 0
     var alram_title : String = ""
+    var alram_vibrate : Bool = false
   
 
    
@@ -155,6 +157,10 @@ class YoutubeController: UIViewController, Final_DataDelegate, UITableViewDataSo
         if let data = dayArray[indexPath.row] as? String {
             cell.alram_day.text = data
         }
+        
+        if alram_vibrate==true
+        {   let image = UIImage(systemName: "iphone.gen2.radiowaves.left.and.right")
+            cell.alram_vibrate.image=image}
         return cell
     }
     

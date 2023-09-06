@@ -41,12 +41,20 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBB-B0-mfC">
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cts-tA-lXo">
                                         <rect key="frame" x="0.0" y="26.666666666666664" width="246" height="21.333333333333336"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBB-B0-mfC">
+                                                <rect key="frame" x="0.0" y="0.0" width="196" height="21.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="500" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jN1-JC-xz2">
+                                                <rect key="frame" x="196" y="0.0" width="50" height="21.333333333333332"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -77,6 +85,7 @@
                 <outlet property="alarm_view" destination="0RB-uJ-tdp" id="js9-Jt-5sS"/>
                 <outlet property="alram_day" destination="uFQ-wW-woi" id="sAh-Ns-Qe9"/>
                 <outlet property="alram_time" destination="xTa-tu-w1p" id="DUU-RK-ZuE"/>
+                <outlet property="alram_vibrate" destination="jN1-JC-xz2" id="TXN-Um-xfz"/>
             </connections>
             <point key="canvasLocation" x="-261.06870229007632" y="-115.49295774647888"/>
         </tableViewCell>
