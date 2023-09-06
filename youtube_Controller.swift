@@ -87,6 +87,8 @@ class YoutubeController: UIViewController, Final_DataDelegate, UITableViewDataSo
         super.viewDidLoad()
         alram_tableview.dataSource = self
         alram_tableview.delegate = self
+        // 테이블 뷰의 편집 모드 활성화
+        
         alram_tableview.register(UINib(nibName: "youtube_cell", bundle: nil), forCellReuseIdentifier: "MyTableViewCell")
         
         // UNUserNotificationCenter의 delegate를 설정
@@ -153,10 +155,6 @@ class YoutubeController: UIViewController, Final_DataDelegate, UITableViewDataSo
         if let data = dayArray[indexPath.row] as? String {
             cell.alram_day.text = data
         }
-        
-        
-
-        
         return cell
     }
     
@@ -167,6 +165,31 @@ class YoutubeController: UIViewController, Final_DataDelegate, UITableViewDataSo
     }
     
     
+    //삭제 구현
+//    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath)->UITableViewCell.EditingStyle {
+//            return .delete
+//    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            
+            
+            // 데이터 배열에서 해당 셀의 데이터를 제거합니다.
+            print(timeArray)
+            print(indexPath.row)
+            timeArray.remove(at: indexPath.row)
+            titleArray.remove(at: indexPath.row)
+            dayArray.remove(at: indexPath.row)
+            alram_tableview.deleteRows(at: [indexPath], with: .fade)
+
+            // 테이블 뷰에서 해당 셀을 삭제합니다.
+          
+        }else if editingStyle == .insert{
+            }
+        
+}
+    
+
 
     //알람 시간 설정
  
