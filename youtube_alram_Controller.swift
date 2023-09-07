@@ -36,9 +36,7 @@ class youtube_alram_Controller:UIViewController,UIApplicationDelegate,DataDelega
     
     @IBOutlet var minutes_pick: minutes_PickerView!
     
-    @IBOutlet var back_btn: UIBarButtonItem!
-    @IBOutlet var url_select_btn: UIBarButtonItem!
-    @IBOutlet var forward_btn: UIBarButtonItem!
+
 
     
     @IBOutlet var monday: UIButton!

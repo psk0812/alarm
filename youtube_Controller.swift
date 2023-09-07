@@ -33,14 +33,24 @@ class YoutubeController: UIViewController, Final_DataDelegate, UITableViewDataSo
             day_all+=day!
             day_all+=" "
         }
-                    
+        
         dayArray.append(day_all)
         alram_tableview.reloadData()
-
+        
+        
+        print(timeArray)
+        print(titleArray)
+        print(vibArrray)
+        print(URLArray)
+        print(dayArray)
+        print(ampmArray)
+        print(hourArray)
+        print(minutesArray)
+        
     }
     
     func sendData(url: URL, title: String, ampm: String, hour: String, minutes: String, check : Bool) {
-
+        
         let combinedString = "\(ampm) \(hour):\(minutes)"
         alram_url = url.absoluteString
         alram_ampm = ampm
@@ -53,30 +63,43 @@ class YoutubeController: UIViewController, Final_DataDelegate, UITableViewDataSo
         timeArray.append(combinedString)
         titleArray.append(title)
         
+        //테이블 리로드와는 상관없음
+        vibArrray.append(alram_vibrate)
+        URLArray.append(url)
+        ampmArray.append(ampm)
+        hourArray.append(hour)
+        minutesArray.append(minutes)
+        
         
         
         
         
     }
     
-
-        
-
-
+    
+    
+    
+    
     var timeArray: [Any] = [] // 데이터 배열 초기화
     var titleArray: [Any] = [] // 데이터 배열 초기화
+    var vibArrray: [Bool] = []
     var dayArray:[String]=[]
+    var URLArray:[URL]=[]
+    var ampmArray:[String]=[]
+    var hourArray:[String]=[]
+    var minutesArray:[String]=[]
+    
     var alram_url : String = ""
     var alram_ampm : String = ""
     var alram_hour : Int = 0
     var alram_minutes : Int = 0
     var alram_title : String = ""
     var alram_vibrate : Bool = false
-  
-
-   
+    
+    
+    
     @IBOutlet var background_View: UIView!
-
+    
     @IBOutlet var alram_tableview: UITableView!
     
     @IBOutlet var button_view: UIView!
@@ -95,8 +118,8 @@ class YoutubeController: UIViewController, Final_DataDelegate, UITableViewDataSo
         
         // UNUserNotificationCenter의 delegate를 설정
         UNUserNotificationCenter.current().delegate = self
-
-
+        
+        
         
         // 이미지를 생성하여 배경 뷰에 설정
         // 이미지를 Asset Catalog에서 가져오기
@@ -113,7 +136,7 @@ class YoutubeController: UIViewController, Final_DataDelegate, UITableViewDataSo
         
         // 이미지 뷰를 맨 뒤로 보내서 다른 UI 요소들 위에 배치
         background_View.sendSubviewToBack(backgroundImageView)
-    
+        
         Good_day.sizeToFit()
         
         Good_day?.textColor=UIColor.white
@@ -127,21 +150,38 @@ class YoutubeController: UIViewController, Final_DataDelegate, UITableViewDataSo
         alram_plus_btn.setTitle("유튜브 알람추가", for: .normal)
         alram_plus_btn.sizeToFit()
         
+        
+    }
     
-        }
+//    @IBAction func alram_add_btn(_ sender: UIButton) {
+//        if timeArray.count >= 2 {
+//            // timeArray에 원소가 8개 이상이면 알림창을 띄웁니다.
+//            let alertController = UIAlertController(title: "알림", message: "알람을 더 이상 추가할 수 없습니다.", preferredStyle: .alert)
+//            let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
+//            alertController.addAction(okAction)
+//            present(alertController, animated: true, completion: nil)
+//        } else {
+//            // timeArray에 원소가 8개 미만이면 youtube_alram_Controller를 present modally로 표시합니다.
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil) // 스토리보드 이름은 앱에 따라 다를 수 있습니다.
+//            let youtubeAlarmController = storyboard.instantiateViewController(withIdentifier: "youtube_alram_Controller") // 해당 뷰 컨트롤러의 identifier를 사용해야 합니다.
+//            present(youtubeAlarmController, animated: true, completion: nil)
+//        }
+//
+    //}
+    
     
     //유튜브 사이트 데이터 받기
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationVC = segue.destination as? youtube_alram_Controller {
             destinationVC.delegate = self
         }
-            
-        }
-       
+        
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return timeArray.count // 데이터 배열의 개수만큼 행 반환
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyTableViewCell", for: indexPath) as! MyTableViewCell
         
@@ -171,10 +211,7 @@ class YoutubeController: UIViewController, Final_DataDelegate, UITableViewDataSo
     }
     
     
-    //삭제 구현
-//    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath)->UITableViewCell.EditingStyle {
-//            return .delete
-//    }
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
@@ -187,75 +224,41 @@ class YoutubeController: UIViewController, Final_DataDelegate, UITableViewDataSo
             titleArray.remove(at: indexPath.row)
             dayArray.remove(at: indexPath.row)
             alram_tableview.deleteRows(at: [indexPath], with: .fade)
-
-            // 테이블 뷰에서 해당 셀을 삭제합니다.
-          
-        }else if editingStyle == .insert{
-            }
-        
-}
-    
-
-
-    //알람 시간 설정
- 
-
-    func scheduleAlarms(url: String,ampm: String, hour: Int, minutes: Int, weekdays: [Int]) {
-        let content = UNMutableNotificationContent()
-        content.title = "알림 타이틀"
-        content.body = "알림 내용"
-        
-        let int_hour = Int(hour)
-        let int_minutes = Int(minutes)
-        
-        let uniqueIdentifier = generateUniqueIdentifier()
-        // 시간 설정
-        var dateComponents = DateComponents()
-        
-        if ampm == "오전" && int_hour == 12 {
-            dateComponents.hour = 0
-        } else if ampm == "오후" && int_hour != 12 {
-            dateComponents.hour = int_hour + 12
-        } else {
-            dateComponents.hour = int_hour
-        }
-        
-        dateComponents.minute = int_minutes
-        
-        let center = UNUserNotificationCenter.current()
-        
-        for weekday in weekdays {
-            dateComponents.weekday = weekday
-            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
-            let request = UNNotificationRequest(identifier: uniqueIdentifier, content: content, trigger: trigger)
+            vibArrray.remove(at: indexPath.row)
+            URLArray.remove(at: indexPath.row)
+            ampmArray.remove(at: indexPath.row)
+            hourArray.remove(at: indexPath.row)
+            minutesArray.remove(at: indexPath.row)
             
-            center.add(request) { error in
-                if let error = error {
-                    print("로컬 알림을 예약하는 데 문제가 발생했습니다: \(error.localizedDescription)")
-                } else {
-                    print("로컬 알림이 예약되었습니다.")
-                }
-            }
-        }
+            print(timeArray)
+            print(titleArray)
+            print(vibArrray)
+            print(URLArray)
+            print(dayArray)
+            print(ampmArray)
+            print(hourArray)
+            print(minutesArray)
+            
+            // 테이블 뷰에서 해당 셀을 삭제합니다.
+            
+        }else if editingStyle == .insert{}
     }
-
-
-  //알람 삭제 cancelAlarm(withIdentifier: "uniqueID")
-    func cancelAlarm(withIdentifier identifier: String) {
-        let center = UNUserNotificationCenter.current()
-        center.removePendingNotificationRequests(withIdentifiers: [identifier])
-    }
-    
-    //삭제를 위한 식별자 만들기
-    func generateUniqueIdentifier() -> String {
-        let currentDate = Date()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyyMMddHHmmssSSS" // 원하는 형식을 지정합니다.
-        let timestamp = dateFormatter.string(from: currentDate)
-        return "uniqueID_\(timestamp)"
-    }
-    
 }
+    
+
+
+
+
+    
+        
+    
+
+
+
+    
+    
+    
+
 
 
 

@@ -11,6 +11,19 @@ import WebKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+//최대 10개의 알람을 만들수 있다.
+    var backgroundTask1: UIBackgroundTaskIdentifier = .invalid
+    var backgroundTask2: UIBackgroundTaskIdentifier = .invalid
+    var backgroundTask3: UIBackgroundTaskIdentifier = .invalid
+    var backgroundTask4: UIBackgroundTaskIdentifier = .invalid
+    var backgroundTask5: UIBackgroundTaskIdentifier = .invalid
+    var backgroundTask6: UIBackgroundTaskIdentifier = .invalid
+    var backgroundTask7: UIBackgroundTaskIdentifier = .invalid
+    var backgroundTask8: UIBackgroundTaskIdentifier = .invalid
+    var backgroundTask9: UIBackgroundTaskIdentifier = .invalid
+    var backgroundTask10: UIBackgroundTaskIdentifier = .invalid
+
 
 
 
