@@ -153,21 +153,25 @@ class YoutubeController: UIViewController, Final_DataDelegate, UITableViewDataSo
         
     }
     
-//    @IBAction func alram_add_btn(_ sender: UIButton) {
-//        if timeArray.count >= 2 {
-//            // timeArray에 원소가 8개 이상이면 알림창을 띄웁니다.
-//            let alertController = UIAlertController(title: "알림", message: "알람을 더 이상 추가할 수 없습니다.", preferredStyle: .alert)
-//            let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
-//            alertController.addAction(okAction)
-//            present(alertController, animated: true, completion: nil)
-//        } else {
-//            // timeArray에 원소가 8개 미만이면 youtube_alram_Controller를 present modally로 표시합니다.
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil) // 스토리보드 이름은 앱에 따라 다를 수 있습니다.
-//            let youtubeAlarmController = storyboard.instantiateViewController(withIdentifier: "youtube_alram_Controller") // 해당 뷰 컨트롤러의 identifier를 사용해야 합니다.
-//            present(youtubeAlarmController, animated: true, completion: nil)
-//        }
-//
-    //}
+    
+    //다음 화면으로 넘어가기전 확인하기.//유튜브 알람을 최대 7개까지만 만들게 하기 위해
+override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "plus_segue" {
+            if timeArray.count == 7 {
+                let alertController = UIAlertController(title: "알림", message: "알람을 최대 7개까지 추가 할 수 있습니다..", preferredStyle: .alert)
+                        let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
+                        alertController.addAction(okAction)
+                        present(alertController, animated: true, completion: nil)
+                
+                
+                // Segue를 실행할 조건을 검사하고, 원하는 경우 실행하지 않도록 false를 반환
+                return false
+            }
+        }
+        // 다른 Segue의 경우 또는 조건이 충족되는 경우 true를 반환하여 Segue를 실행합니다.
+        return true
+    }
+
     
     
     //유튜브 사이트 데이터 받기

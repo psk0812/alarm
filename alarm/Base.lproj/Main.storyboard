@@ -435,7 +435,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                                 <connections>
-                                                    <segue destination="HhK-nC-e97" kind="presentation" id="ZYX-DK-rPP"/>
+                                                    <segue destination="HhK-nC-e97" kind="presentation" identifier="plus_segue" id="ZYX-DK-rPP"/>
                                                 </connections>
                                             </button>
                                         </subviews>
