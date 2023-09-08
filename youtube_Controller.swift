@@ -116,9 +116,7 @@ class YoutubeController: UIViewController, Final_DataDelegate, UITableViewDataSo
         
         alram_tableview.register(UINib(nibName: "youtube_cell", bundle: nil), forCellReuseIdentifier: "MyTableViewCell")
         
-        // UNUserNotificationCenter의 delegate를 설정
-        UNUserNotificationCenter.current().delegate = self
-        
+    
         
         
         // 이미지를 생성하여 배경 뷰에 설정

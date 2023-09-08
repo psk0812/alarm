@@ -8,23 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--useful_controller-->
-        <scene sceneID="DYx-BO-tvh">
-            <objects>
-                <viewController title="useful_controller" id="Tbg-Kt-Bwu" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="iPD-Tw-FQx">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Rh-3j-zEX"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Useful" image="useful" id="txz-ep-Sag"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9j9-da-Nf9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-60" y="658"/>
-        </scene>
         <!--youtube_alram-->
         <scene sceneID="GAV-D9-9QP">
             <objects>
@@ -367,38 +350,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Nc-hy-SOF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1984" y="-34"/>
-        </scene>
-        <!--Earphone-->
-        <scene sceneID="WYm-cc-mbw">
-            <objects>
-                <viewController id="Dd6-Ub-gkf" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="BQ5-xK-7xB">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="dMt-g9-80k"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Earphone" image="earphone" id="bgK-rR-Con"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2rP-bG-v2t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="630" y="312"/>
-        </scene>
-        <!--AlramIngViewController-->
-        <scene sceneID="5j0-le-XKv">
-            <objects>
-                <viewController id="OSB-ZS-2tF" userLabel="AlramIngViewController" customClass="AlramIngViewController" customModule="alarm" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bSR-1z-U4v">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="IQU-kI-Er1"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rm8-k2-9HL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1780" y="781"/>
+            <point key="canvasLocation" x="2120" y="-40"/>
         </scene>
         <!--youtube_controller-->
         <scene sceneID="0on-p3-OOH">
@@ -409,7 +361,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7fR-6U-W6l">
-                                <rect key="frame" x="0.0" y="47" width="428" height="786"/>
+                                <rect key="frame" x="0.0" y="47" width="428" height="835"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYw-eG-IxP">
                                         <rect key="frame" x="0.0" y="0.0" width="428" height="110"/>
@@ -424,11 +376,11 @@
                                         </variation>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Md4-0v-sgC">
-                                        <rect key="frame" x="0.0" y="110" width="428" height="616"/>
+                                        <rect key="frame" x="0.0" y="110" width="428" height="665"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ehe-ZX-JYi">
-                                        <rect key="frame" x="0.0" y="726" width="428" height="60"/>
+                                        <rect key="frame" x="0.0" y="775" width="428" height="60"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q77-hL-PKR">
                                                 <rect key="frame" x="336" y="13" width="75" height="34.333333333333336"/>
@@ -472,35 +424,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fda-Uq-ihd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="597.70992366412213" y="-398.59154929577466"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="IGf-Li-KVx">
-            <objects>
-                <tabBarController id="AuS-Ca-BML" customClass="TabBar_Controller" customModule="alarm" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jtE-15-abI">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="Bbj-la-IRF" kind="relationship" relationship="viewControllers" id="TJn-ZZ-8U6"/>
-                        <segue destination="Dd6-Ub-gkf" kind="relationship" relationship="viewControllers" id="bdf-xn-XD4"/>
-                        <segue destination="Tbg-Kt-Bwu" kind="relationship" relationship="viewControllers" id="MM4-LQ-9cz"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aAh-ex-k6s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-306" y="-94"/>
+            <point key="canvasLocation" x="421" y="-40"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrowshape.backward.fill" catalog="system" width="128" height="104"/>
         <image name="arrowshape.right.fill" catalog="system" width="128" height="104"/>
-        <image name="earphone" width="24" height="24"/>
         <image name="iphone.gen2.radiowaves.left.and.right" catalog="system" width="128" height="85"/>
         <image name="speaker.wave.2.fill" catalog="system" width="128" height="88"/>
-        <image name="useful" width="24" height="24"/>
         <image name="youtube" width="24" height="24"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
