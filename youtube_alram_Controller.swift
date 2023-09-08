@@ -103,21 +103,19 @@ class youtube_alram_Controller:UIViewController,UIApplicationDelegate,DataDelega
         if let url = recive_youtubeurl {
             url_send = url
         } else {
-            print("recive_youtubeurl is nil")
-            return // 중단하거나 에러 처리
+            let alertController = UIAlertController(title: "오류", message: "동영상이 선택되지 않았습니다.", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+            present(alertController, animated: true, completion: nil)
+            return
         }
-
         if let title = recive_youtube_title {
             title_send = title
         } else {
-            print("recive_title is nil")
-            return // 중단하거나 에러 처리
+            let alertController = UIAlertController(title: "오류", message: "recive_title이 nil입니다.", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+            present(alertController, animated: true, completion: nil)
+            return
         }
-        
-    
-
-        
-
 
         let selectedRow = ampm_pick.selectedRow(inComponent: 0)
         ampm_send = ampm_pick.pickerData[selectedRow]

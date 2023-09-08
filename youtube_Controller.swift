@@ -35,7 +35,7 @@ class YoutubeController: UIViewController, Final_DataDelegate, UITableViewDataSo
         }
         
         dayArray.append(day_all)
-        alram_tableview.reloadData()
+        
         
         
         print(timeArray)
@@ -46,6 +46,9 @@ class YoutubeController: UIViewController, Final_DataDelegate, UITableViewDataSo
         print(ampmArray)
         print(hourArray)
         print(minutesArray)
+        
+       
+        alram_tableview.reloadData()
         
     }
     
@@ -80,8 +83,8 @@ class YoutubeController: UIViewController, Final_DataDelegate, UITableViewDataSo
     
     
     
-    var timeArray: [Any] = [] // 데이터 배열 초기화
-    var titleArray: [Any] = [] // 데이터 배열 초기화
+    var timeArray: [String] = [] // 데이터 배열 초기화
+    var titleArray: [String] = [] // 데이터 배열 초기화
     var vibArrray: [Bool] = []
     var dayArray:[String]=[]
     var URLArray:[URL]=[]
